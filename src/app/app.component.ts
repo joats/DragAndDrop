@@ -21,8 +21,8 @@ export class AppComponent {
     'Episode VIII - The Last Jedi'
   ];
 
-  @ViewChild(CdkDropListGroup, { static: false }) listGroup: CdkDropListGroup<CdkDropList>;
-  @ViewChild(CdkDropList, { static: false }) placeholder: CdkDropList;
+  @ViewChild(CdkDropListGroup) listGroup: CdkDropListGroup<CdkDropList>;
+  @ViewChild(CdkDropList) placeholder: CdkDropList;
 
   drop(event: CdkDragDrop<string[]>) {
     moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
